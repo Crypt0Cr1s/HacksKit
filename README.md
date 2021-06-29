@@ -1,5 +1,5 @@
 # HacksKit
-Este es un Kit de scripts de Python, este proyecto es un repertorio de herramientas han sido hechas debido a que he encontrado muchas veces situaciones que necesitan de herramientas como las que se tiene actualmente.
+Este es un Kit de scripts de Python, este proyecto es un repertorio de herramientas han sido desarrolladas debido a que he encontrado muchas veces situaciones que necesitan de herramientas como las que se tiene actualmente.
 Está preparado para ejecutarse en distribuciones de Linux como Kali Linux
 
 El Kit cuenta con las siguientes funciones:

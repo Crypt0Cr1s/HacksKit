@@ -2,7 +2,6 @@ from classes.scriptNmap import nmapaut
 from classes.HtmlParser2 import BurpEParser
 from classes.scriptssl import ssl
 from classes.headers import scanheaders
-from classes.downloader import downloader
 from classes.accesosV import accesovalidar
 from classes.recon import recon
 

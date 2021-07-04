@@ -15,10 +15,9 @@ while ifmenu == True:
     print("2.Parser Burp Enterprise")
     print("3.Ejecutar Script SSL")
     print("4.Escanear headers")
-    print("5.Downloader")
-    print("6.Validador de acceso")
-    print("7.Reconocimiento")
-    print("8.Salir")
+    print("5.Validador de acceso")
+    print("6.Reconocimiento")
+    print("7.Salir")
 
     opcion = int(input("Ingrese la opcion deseada: "))
 
@@ -49,24 +48,17 @@ while ifmenu == True:
         scanheaders.scaner(archivo,rutaout,correlativo)
     elif opcion == 5:
         print("------------------------------------------------")
-        print("Se ha iniciado el modulo de: Escanear headers")
-        n = int(input("Ingrese la cantidad de archivos a descargar: "))
-        url1 = input("Ingrese la primera parte de la URL (Antes del parametro que cambia): ")
-        url2 = input("Ingrese la segunda parte de la URL (Despues del parametro que cambia): ")
-        downloader.downloader(n,url1,url2)
-    elif opcion == 6:
-        print("------------------------------------------------")
         print("Se ha iniciado el modulo de: Validador Acceso")
         archivo=input("Ingrese el nombre del archivo con el listado de sitios a revisar: ")
         rutaout=input("Ingrese el nombre del archivo de salida: ")
         accesovalidar.validador(archivo,rutaout)
-    elif opcion == 7:
+    elif opcion == 6:
         print("------------------------------------------------")
         print("Se ha iniciado el modulo de: Reconocimiento")
         archivo=input("Ingrese el nombre del archivo con el listado de sitios a revisar: ")
         rutaout=input("Ingresa la ruta absoluta donde se desea que se generen los resultados: ")
         recon.recon(archivo,rutaout)
-    elif opcion == 8:
+    elif opcion == 7:
         print("------------------------------------------------")
         print("Saliendo...")
         print("Gracias por usar este toolkit")

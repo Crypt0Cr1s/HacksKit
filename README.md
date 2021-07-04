@@ -8,7 +8,6 @@ El Kit cuenta con las siguientes funciones:
 * Parser de resultados de Burp Enterprise
 * Enumeracion de Certificados SSL
 * Identificacion de Headers de Sitios
-* Downloader
 * Automatizador de Ping
 * Enumeracion de segmentos de red.
 

@@ -15,8 +15,8 @@ while ifmenu == True:
     print("2.Parser Burp Enterprise")
     print("3.Ejecutar Script SSL")
     print("4.Escanear headers")
-    print("5.Validador de acceso")
-    print("6.Reconocimiento")
+    print("5.Automatizador Ping")
+    print("6.Reconocimiento de Red")
     print("7.Salir")
 
     opcion = int(input("Ingrese la opcion deseada: "))
@@ -48,13 +48,13 @@ while ifmenu == True:
         scanheaders.scaner(archivo,rutaout,correlativo)
     elif opcion == 5:
         print("------------------------------------------------")
-        print("Se ha iniciado el modulo de: Validador Acceso")
+        print("Se ha iniciado el modulo de: Automatizador Ping")
         archivo=input("Ingrese el nombre del archivo con el listado de sitios a revisar: ")
         rutaout=input("Ingrese el nombre del archivo de salida: ")
         accesovalidar.validador(archivo,rutaout)
     elif opcion == 6:
         print("------------------------------------------------")
-        print("Se ha iniciado el modulo de: Reconocimiento")
+        print("Se ha iniciado el modulo de: Reconocimiento de Red")
         archivo=input("Ingrese el nombre del archivo con el listado de sitios a revisar: ")
         rutaout=input("Ingresa la ruta absoluta donde se desea que se generen los resultados: ")
         recon.recon(archivo,rutaout)

@@ -17,6 +17,8 @@ El Kit cuenta con las siguientes funciones:
 sudo apt install nmap (válido para Linux que utilice apt como manejador de paquetes)
 ### Progress: 
 pip3 install progress
+### Pillow: 
+pip3 install pillow
 
 ## Instrucciones:
 ```

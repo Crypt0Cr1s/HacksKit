@@ -13,8 +13,8 @@ El Kit cuenta con las siguientes funciones:
 
 
 ## Dependencias:
-### nmap: 
-sudo apt install nmap (valido para Linux que utilice apt como manejador de paquetes)
+### NMAP: 
+sudo apt install nmap (válido para Linux que utilice apt como manejador de paquetes)
 ### Progress: 
 pip3 install progress
 

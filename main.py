@@ -37,13 +37,14 @@ while ifmenu == True:
         print("Se ha iniciado el modulo de: Ejecutar Script SSL")
         archivo=input("Ingresa el nombre del archivo con el listado de sitios a revisar: ")
         rutaout=input("Ingresa la ruta absoluta donde se desea que se generen los resultados: ")
-        ssl.scaner(archivo,rutaout)
+        correlativo = input("Ingrese su correlativo para las evidencias: ")
+        ssl.scaner(archivo,rutaout,correlativo)
     elif opcion == 4:
         print("------------------------------------------------")
         print("Se ha iniciado el modulo de: Escanear headers")
         archivo=input("Ingrese el nombre del archivo con el listado de sitios a revisar: ")
         rutaout=input("Ingrese el nombre del archivo de salida: ")
-        correlativo = input("Ingrese su correlativo: ")
+        correlativo = input("Ingrese su correlativo para las evidencias: ")
         scanheaders.scaner(archivo,rutaout,correlativo)
     elif opcion == 5:
         print("------------------------------------------------")

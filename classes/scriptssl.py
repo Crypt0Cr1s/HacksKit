@@ -6,29 +6,34 @@ import csv
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
+import os
 
 class ssl:
 	def scaner(archivo,rutaout,correlativo):
 		nolinea = 0
 		c = 1
+		no1 = 1
+		no2 = 1
 		pwd = subprocess.getoutput("pwd")
 		pwd = pwd + "/classes/"
 		comando = "nmap --script ssl-cert,ssl-enum-ciphers -p 443"
 		sitios = utilities.Lfiles(archivo)
-		bar = IncrementalBar('Escaneando Sitios:', max = len(sitios))
 
 		for r in sitios:
-			bar.next()
+			print("\nVamos por el sitio: " + str(no1) + " de: " + str(len(sitios)))
 			ssl = subprocess.getoutput(comando + " " + r).lower()
 			outf = open(rutaout + r + ".txt", "w")
 			outf.write(ssl)
 			outf.close()
 			print("\nSe ha creado el archivo: " + r + ".txt en la ruta: " + rutaout)
-			
-		bar.finish()
-		bar2 = IncrementalBar('Generando resultados:', max = len(sitios))
+			no1 += 1
+		
 		resultados = []
 		imagen = ""
+		try:
+			os.mkdir(rutaout + "Evidencias")
+		except OSError as error:
+			print(error)
 		columnas = ("URL","Issuer","public key type","public key bits","validity","Protocols")
 		with open(rutaout + "resultados.csv", 'w', newline='') as csvfile:
 			csvwriter = csv.writer(csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
@@ -36,8 +41,8 @@ class ssl:
 
 
 			for r in sitios:
+				print("\nGenerando resultados para el sitio No.: " + str(no2) + " de: " + str(len(sitios)))
 				resultados.append(r)
-				bar2.next()
 				file = open(rutaout + r + ".txt")
 				lines = file.readlines()
 				while nolinea < 3:
@@ -127,4 +132,5 @@ class ssl:
 				resultados = []
 				c += 1
 				nolinea = 0
+				no2 += 1
 			print("\nSe ha creado el archivo resultados.csv en la ruta: " + rutaout)

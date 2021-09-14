@@ -9,8 +9,8 @@ class accesovalidar:
         outf = open(rutaout + ".txt", "w")
         for r in sitios:
             print("\nVamos por la IP: " + str(c) + " de: " + str(len(sitios)))
-            validador = subprocess.getoutput("ping " + r + "-n 1")
-            if validador.__contains__("Respuesta desde"):
+            validador = subprocess.getoutput("ping " + r + " -c 1")
+            if validador.__contains__("64 bytes from"):
                 outf.write("Respondio la IP: " + r)
             c += 1
         print("\nSe ha creado el archivo: " + rutaout + ".txt")
